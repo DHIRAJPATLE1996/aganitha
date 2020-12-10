@@ -6,6 +6,6 @@ with sr.Microphone() as inputs:
     listening = recognizer.listen(inputs)
     print("wait...")
     try:
-        print("Did you say: "+recognizer.recognize_google(listening,language = "kn-IN"))
+        print("Did you say: "+recognizer.recognize_google(listening,language))
     except:
          print("please speak again")
