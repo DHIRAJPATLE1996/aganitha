@@ -1,4 +1,4 @@
-
+pip install SpeechRecognition
 import speech_recognition as sr
 recognizer = sr.Recognizer()
 with sr.Microphone() as inputs:
