@@ -1,3 +1,11 @@
- >>python3
- >>from spoken2written import sp2wr
- >>sp2wr.convert_sp_to_wr()
+
+import speech_recognition as sr
+recognizer = sr.Recognizer()
+with sr.Microphone() as inputs:
+    print("speak.....")
+    listening = recognizer.listen(inputs)
+    print("wait...")
+    try:
+        print("Did you say: "+recognizer.recognize_google(listening,language = "kn-IN"))
+    except:
+         print("please speak again")
